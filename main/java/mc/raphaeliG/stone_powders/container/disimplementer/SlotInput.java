@@ -1,7 +1,7 @@
 package mc.raphaeliG.stone_powders.container.disimplementer;
 
 import mc.raphaeliG.stone_powders.init.BlockInit;
-import mc.raphaeliG.stone_powders.recipes.ImplementerRecipeHelper;
+import mc.raphaeliG.stone_powders.recipes.implementer.ImplementerRecipeHelper;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;

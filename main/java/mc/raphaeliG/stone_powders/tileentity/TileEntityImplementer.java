@@ -1,6 +1,6 @@
 package mc.raphaeliG.stone_powders.tileentity;
 
-import mc.raphaeliG.stone_powders.recipes.DisimplementerRecipeHelper;
+import mc.raphaeliG.stone_powders.recipes.disimplementer.DisimplementerRecipeHelper;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;

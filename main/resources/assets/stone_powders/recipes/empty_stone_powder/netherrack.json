@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "stone_powders:netherrack_powder"
+        }
+    ],
+    "result": {
+        "item": "stone_powders:empty_stone_powder",
+        "count": 1
+    },
+    "group": "empty_stone_powder"
+}

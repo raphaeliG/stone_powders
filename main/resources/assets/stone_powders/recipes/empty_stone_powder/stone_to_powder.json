@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "stone_powders:powderless_stone"
+        }
+    ],
+    "result": {
+        "item": "stone_powders:empty_stone_powder",
+        "count": 4
+    },
+    "group": "empty_stone_powder"
+}

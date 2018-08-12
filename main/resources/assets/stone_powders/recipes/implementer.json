@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "iJi",
+        "iHi",
+        "iRi"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "H": {
+            "item": "minecraft:hopper"
+        },
+        "J": {
+            "item": "stone_powders:empty_stone_powder"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "item": "stone_powders:powder_implementer",
+        "count": 1
+    }
+}

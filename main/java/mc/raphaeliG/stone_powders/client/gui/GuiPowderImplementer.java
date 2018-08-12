@@ -16,7 +16,7 @@ public class GuiPowderImplementer extends GuiContainer {
 	private IInventory playerInventory;
 	private TileEntityImplementer tileEntity;
 	
-	public static int fuelTime = 0, currentItemfuelTime = 0, disimplementTime = 0, totalDisimplementTime = 0;
+	public static int fuelTime = 0, currentItemfuelTime = 0, progress = 0, totalProgress = 0;
 	
 	public GuiPowderImplementer(IInventory playerInventory, TileEntityImplementer tileEntity) {
 		super(new ContainerImplementer(playerInventory, tileEntity));
@@ -34,12 +34,12 @@ public class GuiPowderImplementer extends GuiContainer {
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
 		drawDefaultBackground();
-		mc.getTextureManager().bindTexture(new ResourceLocation(Reference.MODID, "textures/gui/container/powder_disimplementer.png"));
+		mc.getTextureManager().bindTexture(new ResourceLocation(Reference.MODID, "textures/gui/container/powder_implementer.png"));
 		drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
         PacketHandler.INSTANCE.sendToServer(new PacketGetData(tileEntity.getPos(),
-        		"mc.raphaeliG.stone_powders.client.gui.GuiPowderDisimplementer", "fuelTime", "currentItemfuelTime", "disimplementTime",
-        		"totalDisimplementTime"));
-        tileEntity.setTEData(fuelTime, currentItemfuelTime, disimplementTime, totalDisimplementTime);
+        		"mc.raphaeliG.stone_powders.client.gui.GuiPowderImplementer", "fuelTime", "currentItemfuelTime", "progress",
+        		"totalProgress"));
+        tileEntity.setTEData(fuelTime, currentItemfuelTime, progress, totalProgress);
         GlStateManager.pushMatrix();
         GlStateManager.translate(guiLeft, guiTop, 2);
         if (tileEntity.currentItemFuelTime != 0)
@@ -70,7 +70,7 @@ public class GuiPowderImplementer extends GuiContainer {
 	@Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 		tileEntity.readFromNBT(tileEntity.getUpdatePacket().getNbtCompound());
-		String name = I18n.format("container.powder_disimplementer.name");
+		String name = I18n.format("container.powder_implementer.name");
 		fontRenderer.drawString(name, xSize / 2 - fontRenderer.getStringWidth(name) / 2, 3, 0x404040);
         fontRenderer.drawString(playerInventory.getDisplayName().getFormattedText(), 8, 72, 4210752);
         

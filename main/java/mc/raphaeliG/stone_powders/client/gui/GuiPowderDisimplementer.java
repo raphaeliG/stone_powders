@@ -17,16 +17,12 @@ public class GuiPowderDisimplementer extends GuiContainer {
 	private IInventory playerInventory;
 	private TileEntityDisimplementer tileEntity;
 	
-	public static int fuelTime = 0, currentItemfuelTime = 0, disimplementTime = 0, totalDisimplementTime = 0;
+	public static int fuelTime = 0, currentItemfuelTime = 0, progress = 0, totalProgress = 0;
 	
 	public GuiPowderDisimplementer(IInventory playerInventory, TileEntityDisimplementer tileEntity) {
 		super(new ContainerDisimplementer(playerInventory, tileEntity));
 		this.playerInventory = playerInventory;
 		this.tileEntity = tileEntity;
-		tileEntity.progress = 0;
-		tileEntity.totalProgress = 0;
-		tileEntity.fuelTime = 0;
-		tileEntity.currentItemFuelTime = 0;
 		tileEntity.setTEData(0, 0, 0, 0);
 		xSize = 176;
 		ySize = 166;
@@ -38,9 +34,9 @@ public class GuiPowderDisimplementer extends GuiContainer {
 		mc.getTextureManager().bindTexture(new ResourceLocation(Reference.MODID, "textures/gui/container/powder_disimplementer.png"));
 		drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
         PacketHandler.INSTANCE.sendToServer(new PacketGetData(tileEntity.getPos(),
-        		"mc.raphaeliG.stone_powders.client.gui.GuiPowderDisimplementer", "fuelTime", "currentItemfuelTime", "disimplementTime",
-        		"totalDisimplementTime"));
-        tileEntity.setTEData(fuelTime, currentItemfuelTime, disimplementTime, totalDisimplementTime);
+        		"mc.raphaeliG.stone_powders.client.gui.GuiPowderDisimplementer", "fuelTime", "currentItemfuelTime", "progress",
+        		"totalProgress"));
+        tileEntity.setTEData(fuelTime, currentItemfuelTime, progress, totalProgress);
         GlStateManager.pushMatrix();
         GlStateManager.translate(guiLeft, guiTop, 2);
         if (tileEntity.currentItemFuelTime != 0)
@@ -61,7 +57,7 @@ public class GuiPowderDisimplementer extends GuiContainer {
         	{
         		if (percentage > ((float)100 / 22) * i)
         		{
-        			drawTexturedModalRect(80 + i, 35, 177 + i, 22, 1, 16);
+        			drawTexturedModalRect(80 + i, 35, 177 + i, 1, 1, 16);
         		}
         	}
         }

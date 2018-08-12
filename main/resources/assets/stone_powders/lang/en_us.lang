@@ -1,8 +1,17 @@
 itemGroup.main=raphaeliG's Stone Powders mod
 
-item.obsidian_dust.name=Obsidian Dust
+item.stone_powder.name=Stone Powder
+item.diorite_powder.name=Diorite Powder
+item.granite_powder.name=Granite Powder
+item.andesite_powder.name=Andesite Powder
+item.obsidian_powder.name=Obsidian Powder
+item.netherrack_powder.name=Netherrack Powder
+item.end_stone_powder.name=Endstone Powder
+item.empty_stone_powder.name=Empty Stone Dust
 
 tile.powder_implementer.name=Powder Implementer
 tile.powder_disimplementer.name=Powder Disimplementer
+tile.powderless_stone.name=Powderless Stone
 
 container.powder_disimplementer.name=Powder Disimplementer
+container.powder_implementer.name=Powder Implementer

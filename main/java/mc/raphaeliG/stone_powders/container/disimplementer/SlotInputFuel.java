@@ -1,6 +1,6 @@
 package mc.raphaeliG.stone_powders.container.disimplementer;
 
-import mc.raphaeliG.stone_powders.recipes.DisimplementerRecipeHelper;
+import mc.raphaeliG.stone_powders.recipes.disimplementer.DisimplementerRecipeHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;

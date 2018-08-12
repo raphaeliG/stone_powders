@@ -65,7 +65,7 @@ public class TileEntityMachine extends TileEntitySidedInventory implements ITick
 	/**
 	 * Override and call super
 	 */
-	private boolean isWorking()
+	public boolean isWorking()
 	{
 		return fuelTime > 0;
 	}
