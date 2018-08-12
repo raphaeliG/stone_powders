@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "side": "stone_powders:blocks/powder_implementer",
+        "end": "blocks/furnace_top"
+    }
+}

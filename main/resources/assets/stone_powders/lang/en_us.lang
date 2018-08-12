@@ -1,0 +1,8 @@
+itemGroup.main=raphaeliG's Stone Powders mod
+
+item.obsidian_dust.name=Obsidian Dust
+
+tile.powder_implementer.name=Powder Implementer
+tile.powder_disimplementer.name=Powder Disimplementer
+
+container.powder_disimplementer.name=Powder Disimplementer
